@@ -4,12 +4,20 @@ Public Class StansGrocery
     Dim food(255, 2) As String
 
     Sub LoadDataFile()
-        Dim fileName As String = "C:\Users\clbog\OneDrive\Desktop\VisualBasic\StansGrocery_CB\StansGrocery_CB"
+        Dim fileName As String = "C:\Users\clbog\OneDrive\Desktop\VisualBasic\StansGrocery_CB\Grocery.txt"
         Dim record As String
         Dim row As Integer
         Dim temp() As String
 
-        FileOpen(1, fileName, OpenMode.Input)
+
+
+        Try
+            FileOpen(1, fileName, OpenMode.Input)
+        Catch ex As Exception
+
+        End Try
+
+
 
         Do Until EOF(1)
 
@@ -20,11 +28,14 @@ Public Class StansGrocery
 
             'grab location 
             Input(1, record)
-            food(row, 1) = record
+            temp = Split(record, "##LOC")
+            food(row, 1) = temp(1)
 
             'grab category
             Input(1, record)
-            food(row, 2) = record
+            temp = Split(record, "%%CAT")
+            food(row, 2) = temp(1)
+
 
             row += 1
         Loop
@@ -40,5 +51,6 @@ Public Class StansGrocery
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         LoadDataFile()
+        ListBoxDisplay()
     End Sub
 End Class

@@ -35,7 +35,6 @@ Public Class StansGrocery
     Sub ListBoxDisplay()
         For i = Me.food.GetLowerBound(0) To Me.food.GetUpperBound(0)
             ListBox1.Items.Add($"{Me.food(i, 0)} : {Me.food(i, 1)} : {Me.food(i, 2)}")
-
         Next
     End Sub
 

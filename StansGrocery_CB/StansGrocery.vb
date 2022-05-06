@@ -3,6 +3,9 @@
 'Spring 22
 'Stan's Grocery
 'https://github.com/bogacars/StansGrocery_CB.git
+'one really weird bug with load shows the whole array with just numbers
+'don't click or program will crash
+'instead click on show all in combo box then filter by ""
 
 
 Option Explicit On

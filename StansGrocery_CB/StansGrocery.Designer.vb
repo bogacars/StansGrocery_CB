@@ -43,6 +43,8 @@ Partial Class StansGrocery
         Me.MainToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.FilterComboBox = New System.Windows.Forms.ComboBox()
         Me.ComboFilterLabel = New System.Windows.Forms.Label()
+        Me.DisplayLabel = New System.Windows.Forms.Label()
+        Me.ITLLabel = New System.Windows.Forms.Label()
         Me.FilterGroupBox.SuspendLayout()
         Me.TopMenuStrip.SuspendLayout()
         Me.ContextMenuStrip.SuspendLayout()
@@ -138,13 +140,13 @@ Partial Class StansGrocery
         'SearchToolStripMenuItem
         '
         Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
-        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
         Me.SearchToolStripMenuItem.Text = "Search"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'HelpToolStripMenuItem
@@ -157,7 +159,7 @@ Partial Class StansGrocery
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'ContextMenuStrip
@@ -195,11 +197,30 @@ Partial Class StansGrocery
         Me.ComboFilterLabel.TabIndex = 7
         Me.ComboFilterLabel.Text = "Filter By:"
         '
+        'DisplayLabel
+        '
+        Me.DisplayLabel.AutoSize = True
+        Me.DisplayLabel.Location = New System.Drawing.Point(12, 395)
+        Me.DisplayLabel.Name = "DisplayLabel"
+        Me.DisplayLabel.Size = New System.Drawing.Size(0, 13)
+        Me.DisplayLabel.TabIndex = 8
+        '
+        'ITLLabel
+        '
+        Me.ITLLabel.AutoSize = True
+        Me.ITLLabel.Location = New System.Drawing.Point(9, 362)
+        Me.ITLLabel.Name = "ITLLabel"
+        Me.ITLLabel.Size = New System.Drawing.Size(92, 13)
+        Me.ITLLabel.TabIndex = 9
+        Me.ITLLabel.Text = "Item and Location"
+        '
         'StansGrocery
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(389, 392)
+        Me.ClientSize = New System.Drawing.Size(389, 417)
+        Me.Controls.Add(Me.ITLLabel)
+        Me.Controls.Add(Me.DisplayLabel)
         Me.Controls.Add(Me.ComboFilterLabel)
         Me.Controls.Add(Me.FilterComboBox)
         Me.Controls.Add(Me.DisplayListBox)
@@ -241,4 +262,6 @@ Partial Class StansGrocery
     Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents FilterComboBox As ComboBox
     Friend WithEvents ComboFilterLabel As Label
+    Friend WithEvents DisplayLabel As Label
+    Friend WithEvents ITLLabel As Label
 End Class

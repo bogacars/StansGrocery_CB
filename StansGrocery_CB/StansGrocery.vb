@@ -2,7 +2,7 @@
 'RCET 0265
 'Spring 22
 'Stan's Grocery
-'
+'https://github.com/bogacars/StansGrocery_CB.git
 
 
 Option Explicit On
